@@ -64,7 +64,7 @@ The table below details major commercial corporate cards and spend management Sa
 
 Corporate card ecosystems demand banking licenses, Visa/Mastercard network access, and PCI DSS compliance at the plastic issuance layer. Consequently, open-source projects primarily provide **self-hosted expense approval workflows, receipt OCR extraction, subscription audit engines, and BaaS issuing reference implementations**.
 
-Repositories are listed in **descending order by GitHub star count**:
+Repositories are listed in **descending order by GitHub Stars_Count**:
 
 ### 🧾 Enterprise Expense & Spend Management
 
