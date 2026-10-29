@@ -1,201 +1,125 @@
-# Awesome-Corporate-Card
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Corporate Card - Curated Fintech & Spend Management Ecosystem" width="100%" />
+</p>
 
-## Top Corporate Card Ecosystem
+# Awesome Corporate Card [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Business Charge Cards, Spend Controls & Self-Hosted Expense Infrastructure*  
+> A curated list of leading corporate card platforms, commercial charge cards, spend management software, BaaS card-issuing APIs, and open-source expense tracking infrastructure.
 
 **Last updated: October 2026**
 
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Corporate Cards**. These tools enable businesses to issue employee cards, set spending limits, automate receipt matching, and streamline expense reporting—turning company spend into a controlled, visible, and accountable operation.
-
-
-
-**Examples** include Shopify Credit, Brex, Ramp, Mercury Card, Stripe Corporate Card, American Express Business, Capital On Tap, Rho Card, Torpago, and Divvy (BILL Spend & Expense) (the category leaders).
-
-
-
-**Open-source emphasis**: Corporate Card is a domain where open-source tooling is **fundamentally limited by the card-issuing layer**. The strongest open-source projects are **Expensify's New Expensify** (MIT, 5,000+ stars, actively maintained, with corporate card management and receipt scanning)  and **FinPilot** (a full-stack expense approval system with multi-level workflows and receipt OCR) . **Stripe's sample apps** (issuing-treasury, platform-issuing) demonstrate how to *build* a corporate card program using Stripe Issuing—but they are reference implementations, not deployable products. **No open-source project replicates the integrated card-issuing, credit underwriting, and rewards engine** of Brex, Ramp, or Shopify Credit. The card itself (the Visa/Mastercard plastic) requires a banking partner and regulatory licensing that software alone cannot provide.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Shopify Credit](https://www.shopify.com/credit)**  
-
-  Pay-in-full Visa® business card from Shopify, powered by Stripe and issued by Celtic Bank; **no credit checks or personal guarantee**; offers up to **3% cashback** on top spend category (marketing, fulfillment, or wholesale) and 1% on the rest; payment options include 1-month grace period or up to 10 months paid from daily sales for a fee . Virtual card on approval, physical card in 5-7 days.
-
-
-
-- **[Brex](https://www.brex.com/)**  
-
-  Corporate card and spend management platform with AI-powered controls, automated receipts, and expense assistant; Spring 2026 release adds **automatic ERP vendor creation** (NetSuite, Sage Intacct, QuickBooks Online, Xero), **foreign VAT reclaim** integration via Fintua and VAT IT, and Microsoft Dynamics 365 Business Central connectivity . Claims 71% of expenses handled entirely by automations.
-
-
-
-- **[Ramp](https://ramp.com/)**  
-
-  Corporate card and finance automation platform with **AI that proactively identifies savings**—flagging duplicate subscriptions, negotiating SaaS contracts, and alerting to unusual spending . Q1 2026 adds **real-time budget vs. actuals tracking**, **Accounting Agents** that code transactions with 98% accuracy and sync to ERP, and **Ramp Global** expansion to UK/EU with local payment rails (SEPA, BACS) and local issuing in Mexico and Brazil .
-
-
-
-- **[Mercury Card (IO)](https://mercury.com/credit)**  
-
-  Corporate card with **1.5% cashback on all spend**, no annual or interest fees; limits scale with cash balances held in Mercury; **no personal guarantee**; automatic reporting to major credit bureaus; built-in expense management with AI categorization and receipt matching . Available without a Mercury deposit account (IO-only) with linked external bank account for underwriting .
-
-
-
-- **[Stripe Corporate Card](https://stripe.com/)**  
-
-  Card issuing via **Stripe Issuing** (programmatic virtual/physical cards with real-time authorization and spend controls) and **Treasury** (prepaid debit cards drawing from a financial account, up to 100 cards per account, no coding required) . Requires a Stripe account and is designed for platforms building card programs rather than direct-to-business card offerings.
-
-
-
-- **[American Express Business](https://www.americanexpress.com/)**  
-
-  Suite of business credit cards including Business Platinum ($895 annual fee, travel/lounge perks), Delta SkyMiles Gold Business, Marriott Bonvoy Business, and Amazon Business Prime; rewards range from 1-6 points per dollar; most require personal guarantee and good credit .
-
-
-
-- **[Capital On Tap](https://www.capitalontap.com/)**  
-
-  UK business credit card with **1 point per £1** (redeemable for cash, gift cards, Avios, Virgin Points, or Radisson Rewards); no annual, foreign exchange, or ATM fees; unlimited employee cards with individual spending limits; **preloading feature** earns 1% cashback on preloaded spend (1.25% for Pro) . Requires personal guarantee; APR as low as 13.86% variable.
-
-
-
-- **[Rho Card](https://www.rho.co/)**  
-
-  Corporate card and spend management platform with **Expenses API** (read-only view of corporate card expenses with approval state, policy compliance, tags, and receipt attachments) . API-first design for integration into custom finance stacks.
-
-
-
-- **[Torpago](https://pitchbook.com/profiles/company/432495-64)**  
-
-  Corporate card and expense management platform designed for **banks to deliver credit experiences** to their business customers; provides virtual cards with expense automation . Founded 2019, raised ~$100M; positioned as infrastructure for bank-issued corporate cards rather than direct-to-business.
-
-
-
-- **[Divvy (BILL Spend & Expense)](https://www.bill.com/product/corporate-cards)**  
-
-  Corporate charge card with **no annual fees**, credit lines from $1,000 to $5M, and **performance-based rewards** (up to 7x points on restaurants, 5x on hotels with weekly payoff) . Enforceable budgets that stop overspending before it happens; unlimited virtual cards; deep ERP syncs (QuickBooks, NetSuite); reports to SBFE for business credit building . No interest charges (charge card, balance due in full).
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Expense Management Platforms
-
-
-
-- **[Expensify (New Expensify)](https://github.com/Expensify/App)**  
-
-  The largest open-source **expense management platform** available (MIT, 5,000+ GitHub stars, actively maintained with commits within hours) . Features corporate card management, **SmartScan receipt OCR** that extracts and categorizes data, automated approval workflows, real-time syncing across devices, global reimbursements in 160+ currencies, and integrations with accounting/HR/travel systems . **The most complete open-source expense platform**—but the card issuing and banking layer remains proprietary (Expensify's commercial card program).
-
-
-
-- **[FinPilot](https://github.com/Abhinavhaldiya/FinPilot)**  
-
-  Open-source enterprise **expense approval system** (React/Node.js/PostgreSQL) . Features smart claim submission with receipt uploads and auto-categorization, multi-currency support with real-time exchange rates, **receipt OCR**, multi-level approval workflows based on amount thresholds, role-based access (Employee, Manager, HR, Finance), budget tracking for departmental limits, audit trail, and PDF/Excel/CSV export . **Strong for reimbursement workflows and policy enforcement**—but lacks corporate card integration and real-time transaction feeds.
-
-
-
-- **[Zemio](https://github.com/zemio-co/zemio)**  
-
-  Open-source, self-hostable expense claim management platform for student initiatives (MIT, public beta) . Features expense reports with itemized expenses and receipt attachments (up to 5 files), **review workflow** (Draft → Pending Approval → Needs Revision/Accepted/Rejected → Paid), multi-tenant organizations, Microsoft OAuth, **encrypted banking details** snapshotted at submission, cost unit allocation, PDF export, and audit trail . **Best for small organizations** needing structured reimbursement workflows.
-
-
-
-### Card Issuing Infrastructure (Build Your Own)
-
-
-
-- **[Stripe Issuing + Treasury Sample Apps](https://github.com/stripe-samples/issuing-treasury)**  
-
-  Official Stripe sample applications (Node.js) for building **corporate card programs** with Stripe Issuing and Treasury . Includes `expense-management` (commercial pre-funded card Issuing program) and `embedded-finance` (full-stack financial services) demos. Demonstrates virtual card creation, **MCC-based spending controls**, real-time authorization webhooks (2-second approval), and transaction monitoring. **Reference implementations**—not production-ready products, but the clearest open-source blueprint for building a card program.
-
-
-
-- **[Platform Issuing Demo](https://github.com/kater-stripe/platform-issuing)**  
-
-  Comprehensive demo of **Stripe Connect + Issuing** for building payment platforms with virtual card issuance . Features account onboarding, balance management, virtual cards, **MCC-based restrictions** (allowed: restaurants/transportation/cosmetics; blocked: gas stations/gambling), spending limits (£25/day, £500/month), and **real-time webhook-based transaction approval** (2-second decisions) . **The most detailed open-source reference** for implementing spend controls on issued cards.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Cajachica** — Open-source expense approval system (Node.js/PostgreSQL) with multi-level approvals, receipt OCR, and audit trails; similar scope to FinPilot but less active .
-
-- **No open-source corporate card issuer exists** — The card plastic, credit underwriting, banking partnerships, and regulatory compliance (KYC/AML, capital requirements) that underpin Brex, Ramp, or Shopify Credit are not replicable by open-source software. Stripe's samples show how to *integrate* with an issuing provider, not how to *become* one.
-
-
-
-**Frameworks for building custom systems**: For **expense management and reimbursement workflows**, Expensify (if using their platform) or FinPilot/Zemio (if self-hosting) provide functional foundations . For **building a card program**, Stripe Issuing samples demonstrate the integration pattern—but require a Stripe account, banking partner, and compliance infrastructure . No open-source project provides the integrated card + spend controls + rewards + underwriting stack of Ramp or Brex.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Corporate card platforms handling payment card data must comply with **PCI DSS** requirements; card issuing requires banking partnerships, KYC/AML compliance, and regulatory licensing that open-source software cannot provide.
-
-- **Open-source corporate cards are limited to the expense management layer**—Expensify, FinPilot, and Zemio provide expense workflows, and Stripe samples demonstrate card program integration . However, **no open-source project replicates the integrated card issuing, credit underwriting, and rewards engine** of Brex, Ramp, or Shopify Credit. Businesses seeking a corporate card should evaluate commercial providers; those building a card program should use Stripe Issuing or similar BaaS with proper compliance infrastructure.
-
-- Verify license terms for commercial use; Expensify uses MIT , FinPilot is open-source , Zemio uses MIT , and Stripe samples are provided under Stripe's terms.
-
-
+This repository tracks notable **SaaS platforms** and **open-source projects** in the **corporate card** and **spend management** domain. These fintech tools enable modern businesses, startups, and enterprises to issue virtual and physical employee cards, enforce real-time MCC spending limits, automate receipt matching via OCR, and streamline ERP expense reconciliation.
 
 ---
 
+## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Hosted Platforms](#saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+  - [Enterprise Expense & Spend Management](#enterprise-expense--spend-management)
+  - [Card Issuing Infrastructure & BaaS Samples](#card-issuing-infrastructure--baas-samples)
+- [How to Choose a Corporate Card](#how-to-choose-a-corporate-card)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
 
-**Made for finance teams, spend managers, and fintech builders exploring corporate card infrastructure.**  
+---
 
-Let's make corporate spend management more open at the software layer, but with clear eyes about the banking and underwriting infrastructure that software cannot replace.
+## Sector Overview & Market Dynamics
+
+The global commercial and corporate card market is estimated at **$44 billion to $47 billion** and is projected to expand toward **$87 billion to $93 billion** at a Compound Annual Growth Rate (CAGR) of **7.0% to 7.7%**, driving trillions in annual B2B transaction volume. 
+
+The sector is **moderately fragmented yet increasingly polarized between legacy enterprise incumbents and winner-take-all software-first fintechs**: established global networks (such as American Express) maintain heavy enterprise T&E dominance, while aggressive hyper-growth platforms (like Ramp and Brex) rapidly capture mid-market and startup FinOps through AI-driven automated reconciliation, zero-fee software tiers, and embedded ERP sync.
+
+---
+
+## SaaS & Hosted Platforms
+
+The table below details major commercial corporate cards and spend management SaaS platforms, sorted descending by company scale (valuation or market capitalization):
+
+| Platform | Company Scale (Valuation / Revenue) | Pricing (Starting Tier) | Free Tier Limits / Trial | Key Capabilities & Highlights |
+| :--- | :--- | :--- | :--- | :--- |
+| **[American Express Business](https://www.americanexpress.com/)** | **~$210B Market Cap** ($72.2B annual revenue) | **$0/year** (e.g., Blue Business Plus / Cash); Premium cards up to $895/year (Business Platinum) | **Permanent free tier** ($0 annual fee) with up to 99 employee cards, 2x points or 2% cash back up to $50,000 spend/yr | Global acceptance, flexible credit limits (Expanded Buying Power), travel lounges, and direct QuickBooks integration. |
+| **[Stripe Corporate Card & Issuing](https://stripe.com/)** | **$159B Valuation** (~$6.8B annual revenue) | **$0.10/virtual card**, **$3.00/physical card** + ~$0.20 per transaction volume tiers | **Pay-as-you-go developer model** ($0 monthly platform fee; free testmode sandbox with unlimited virtual card creation) | BaaS programmable card issuing, real-time auth webhooks (sub-2s decisions), MCC spend controls, and Treasury balances. |
+| **[Shopify Credit](https://www.shopify.com/credit)** | **~$140B Market Cap** (~$3.6B quarterly revenue) | **$0/month** (Requires active Shopify merchant subscription starting at $29/mo) | **Permanent free tier** ($0 card annual fee, no late fees, no foreign transaction fees); underwritten by Shopify store GMV | Pay-in-full Visa commercial card powered by Stripe/Celtic Bank; up to 3% cash back on top categories; virtual cards instantly. |
+| **[Ramp](https://ramp.com/)** | **$60B Valuation** (Over $2B annualized revenue) | **$0/user/month** on Free plan; Ramp Plus starts at **$15/user/month** | **Permanent free tier** with unlimited users and cards, basic bill pay (AP), expense management, and QuickBooks/Xero sync | AI-driven spend savings, automated receipt matching, ERP integrations, real-time budget vs. actuals, and Ramp Global. |
+| **[Mercury Card (IO)](https://mercury.com/credit)** | **$5.2B Valuation** (~$1B annualized revenue) | **$0/month** on Standard plan; Mercury Plus starts at **$35/month** ($29.90/mo billed annually) | **Permanent free tier** ($0/mo) with unlimited virtual/physical cards, unlimited users, and free domestic ACH & wires | 1.5% cashback on all card spend, limits scaled to cash balances (no personal guarantee), automated receipt matching. |
+| **[Brex](https://www.brex.com/)** | **$5.15B Valuation** (Acquired by Capital One; ~$500M ARR) | **$0/user/month** on Essentials plan; Brex Premium starts at **$12/user/month** | **Permanent free tier** for small teams with essential corporate cards, automated receipt capture, and basic spend controls | Corporate cards with automated ERP vendor creation, VAT reclaim workflows, multi-currency support, and AI expense assistant. |
+| **[Divvy (BILL Spend & Expense)](https://www.bill.com/product/corporate-cards)** | **$2.5B Valuation** (Acquired by BILL; ~$100M ARR) | **$0/month** ($0 annual fee, $0 software fee; monetized via card interchange) | **Permanent free tier** with unlimited users, unlimited virtual cards, and enforceable departmental budget limits | Charge card with credit lines from $1,000 to $5M, up to 7x rewards on weekly payoffs, and direct sync to NetSuite/QuickBooks. |
+| **[Rho Card](https://www.rho.co/)** | **~$500M Valuation** (Series B fintech) | **$0/month** on Standard Banking & Card tier; custom pricing for enterprise multi-entity | **Permanent free tier** ($0 monthly platform fee) with unlimited physical/virtual commercial cards and free ACH/wires | Corporate cards bundled with integrated AP automation, Expenses API for programmatic reporting, and automated receipt sync. |
+| **[Capital On Tap](https://www.capitalontap.com/)** | **~$100M+ Revenue** (Debt-backed SME credit provider) | **$0/year** (£0/yr) on Classic Card; Pro Card available at **£299/year** | **Permanent free tier** with unlimited employee cards, 1% uncapped cashback, and $0 FX/ATM fees | Dedicated business credit card with preloading rewards, individual employee card limit controls, and Avios/Virgin Points transfer. |
+| **[Torpago](https://torpago.com/)** | **~$55M Valuation** (~$5M+ annual revenue) | Enterprise custom deployment (Starting tiers from **$1,500+/month** implementation/SaaS fee for bank partners) | **14-day institutional sandbox / pilot demo** with provisioned test card bins and simulated webhook authorizations | White-label card issuing and spend management infrastructure enabling regional and community banks to launch corporate cards. |
+
+---
+
+## Open-Source GitHub Projects
+
+Corporate card ecosystems demand banking licenses, Visa/Mastercard network access, and PCI DSS compliance at the plastic issuance layer. Consequently, open-source projects primarily provide **self-hosted expense approval workflows, receipt OCR extraction, subscription audit engines, and BaaS issuing reference implementations**.
+
+Repositories are listed in **descending order by GitHub star count**:
+
+### Enterprise Expense & Spend Management
+
+- **[paperless-ngx/paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)** [![Stars](https://img.shields.io/github/stars/paperless-ngx/paperless-ngx?style=social&color=white)](https://github.com/paperless-ngx/paperless-ngx/stargazers)  
+  *Community-driven document and receipt management system with automated OCR.* Indexes scanned receipts, purchase invoices, and card statements with full-text search, machine learning tag matching, and automated email inbox polling for corporate transaction receipts.
+
+- **[actualbudget/actual](https://github.com/actualbudget/actual)** [![Stars](https://img.shields.io/github/stars/actualbudget/actual?style=social&color=white)](https://github.com/actualbudget/actual/stargazers)  
+  *Privacy-focused, local-first budgeting and multi-account spend tracker.* Supports direct bank and credit card statement syncing (via SimpleFIN and GoCardless), envelope-based corporate budget limits, multi-device sync, and custom transaction categorization.
+
+- **[firefly-iii/firefly-iii](https://github.com/firefly-iii/firefly-iii)** [![Stars](https://img.shields.io/github/stars/firefly-iii/firefly-iii?style=social&color=white)](https://github.com/firefly-iii/firefly-iii/stargazers)  
+  *Self-hosted financial and expense manager.* Supports tracking multiple credit card liability accounts, automated rule-based transaction classification, recurring subscription tracking, and CSV/OFX/QIF card statement reconciliation.
+
+- **[invoiceninja/invoiceninja](https://github.com/invoiceninja/invoiceninja)** [![Stars](https://img.shields.io/github/stars/invoiceninja/invoiceninja?style=social&color=white)](https://github.com/invoiceninja/invoiceninja/stargazers)  
+  *Leading open-source billing, invoicing, and expense tracking platform.* Features employee expense approval workflows, vendor payment tracking, multi-currency support, receipt attachments, and seamless conversion of billable corporate card expenses into client invoices.
+
+- **[Expensify/App](https://github.com/Expensify/App)** [![Stars](https://img.shields.io/github/stars/Expensify/App?style=social&color=white)](https://github.com/Expensify/App/stargazers)  
+  *The flagship open-source expense management platform (New Expensify).* Features commercial card spend management, real-time SmartScan receipt OCR, multi-level approval hierarchies, global reimbursements across 160+ currencies, and seamless ERP ledger synchronization.
+
+- **[Wondermove-Inc/saaslens](https://github.com/Wondermove-Inc/saaslens)** [![Stars](https://img.shields.io/github/stars/Wondermove-Inc/saaslens?style=social&color=white)](https://github.com/Wondermove-Inc/saaslens/stargazers)  
+  *Open-source corporate SaaS and credit card spend reconciler.* Audits recurring card payments against discovered SaaS vendor contracts, identifies unused subscription seats, and highlights anomalous corporate card charges.
+
+- **[Abhinavhaldiya/FinPilot](https://github.com/Abhinavhaldiya/FinPilot)** [![Stars](https://img.shields.io/github/stars/Abhinavhaldiya/FinPilot?style=social&color=white)](https://github.com/Abhinavhaldiya/FinPilot/stargazers)  
+  *Enterprise expense approval and reimbursement platform.* Features role-based access control (Employee, Manager, HR, Finance), multi-level threshold approvals, Tesseract-based receipt OCR, departmental budget limits, and audit trails.
+
+- **[zemio-co/zemio](https://github.com/zemio-co/zemio)** [![Stars](https://img.shields.io/github/stars/zemio-co/zemio?style=social&color=white)](https://github.com/zemio-co/zemio/stargazers)  
+  *Self-hosted expense claim management system.* Offers review lifecycle states (`Draft` → `Pending Approval` → `Accepted`/`Rejected` → `Paid`), multi-tenant workspace separation, encrypted banking details, and PDF audit summaries.
+
+---
+
+### Card Issuing Infrastructure & BaaS Samples
+
+- **[stripe-samples/issuing-treasury](https://github.com/stripe-samples/issuing-treasury)** [![Stars](https://img.shields.io/github/stars/stripe-samples/issuing-treasury?style=social&color=white)](https://github.com/stripe-samples/issuing-treasury/stargazers)  
+  *Official Stripe reference implementation for building commercial card programs.* Demonstrates virtual card provisioning, real-time authorization webhooks (sub-2s decision responses), MCC authorization restrictions, and spend control architecture.
+
+- **[kater-stripe/platform-issuing](https://github.com/kater-stripe/platform-issuing)** [![Stars](https://img.shields.io/github/stars/kater-stripe/platform-issuing?style=social&color=white)](https://github.com/kater-stripe/platform-issuing/stargazers)  
+  *Complete demonstration of Stripe Connect + Issuing.* Features onboarding, virtual card lifecycle controls, MCC category whitelisting/blacklisting, velocity spending limits (£25/day, £500/month), and webhook-based programmatic auth processing.
+
+---
+
+## How to Choose a Corporate Card
+
+When evaluating corporate card and spend management providers, benchmark across four foundational criteria:
+
+1. **Underwriting Model & Guarantees**: Does the card require a personal guarantee (common with traditional bank credit cards), or is credit underwritten based on cash balances / business revenue (e.g., Ramp, Brex, Mercury)?
+2. **Software Automation & ERP Integration**: Does the provider offer zero-fee automated receipt OCR, enforceable pre-spend limits, and direct bi-directional synchronization with NetSuite, QuickBooks, or Xero?
+3. **Card Modalities & Velocity Controls**: Can finance administrators generate single-use virtual cards, set per-merchant spend caps, and restrict specific MCC categories (e.g., blocking gambling or gas stations)?
+4. **Foreign Exchange & Global Rails**: Does the platform provide native multi-currency balances, zero-fee foreign exchange, and local card issuance for cross-border teams (e.g., USD, EUR, GBP)?
+
+---
+
+## How to Contribute
+
+Contributions are welcome! Please follow these guidelines:
+
+1. Fork this repository.
+2. Edit or add verified entries in `README.md` following the established table or badge format.
+3. Verify that all URLs, pricing tiers, and licensing details are factual and up-to-date.
+4. Submit a clear, well-described Pull Request.
+
+---
+
+## Disclaimer
+
+- This repository is a **community-curated index** created for educational and architectural research purposes. It is not affiliated with, sponsored by, or endorsed by any listed company or bank.
+- Issuing commercial credit or charge cards requires compliance with **PCI DSS** standards, banking partnerships, and regional AML/KYC regulations.
+- Verify pricing plans, terms of service, and reward disclosures directly on official vendor websites before selecting a corporate card solution.

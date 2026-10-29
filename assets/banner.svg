@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="50%" stop-color="#0c162d" />
+      <stop offset="100%" stop-color="#060913" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="dropGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+
+    <style>
+      @keyframes floatCard1 {
+        0%, 100% { transform: translateY(0px) rotate(-6deg); }
+        50% { transform: translateY(-12px) rotate(-4deg); }
+      }
+      @keyframes floatCard2 {
+        0%, 100% { transform: translateY(0px) rotate(8deg); }
+        50% { transform: translateY(-16px) rotate(10deg); }
+      }
+      @keyframes pulseBeam {
+        0%, 100% { opacity: 0.25; stroke-dashoffset: 0; }
+        50% { opacity: 0.65; stroke-dashoffset: -50; }
+      }
+      @keyframes badgePulse {
+        0%, 100% { opacity: 0.85; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.03); }
+      }
+      .anim-card1 {
+        animation: floatCard1 6s ease-in-out infinite;
+        transform-origin: 940px 180px;
+      }
+      .anim-card2 {
+        animation: floatCard2 7s ease-in-out infinite;
+        transform-origin: 1040px 170px;
+      }
+      .anim-beam {
+        stroke-dasharray: 12, 12;
+        animation: pulseBeam 5s linear infinite;
+      }
+      .anim-badge {
+        animation: badgePulse 4s ease-in-out infinite;
+        transform-origin: 350px 75px;
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        fill: #ffffff;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        fill: #94a3b8;
+      }
+      .card-text {
+        font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="20" fill="url(#bgGrad)" />
+
+  <!-- Subtle Grid Lines -->
+  <g stroke="#334155" stroke-opacity="0.2" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Ambient Glowing Orbs in Background -->
+  <circle cx="980" cy="180" r="160" fill="#3b82f6" opacity="0.15" filter="url(#dropGlow)" />
+  <circle cx="1090" cy="120" r="130" fill="#a855f7" opacity="0.18" filter="url(#dropGlow)" />
+  <circle cx="200" cy="80" r="100" fill="#0ea5e9" opacity="0.1" filter="url(#dropGlow)" />
+
+  <!-- Animated Data Connection Lines -->
+  <path d="M 650 280 Q 800 290 920 220" fill="none" stroke="#38bdf8" stroke-width="2" class="anim-beam" />
+  <path d="M 700 100 Q 840 80 970 140" fill="none" stroke="#a855f7" stroke-width="2" class="anim-beam" />
+
+  <!-- Dynamic Floating Corporate Cards (Background Graphic Section) -->
+  <!-- Secondary Card (Card 2) -->
+  <g class="anim-card2" filter="url(#cardShadow)">
+    <rect x="910" y="80" width="220" height="135" rx="14" fill="url(#cardGrad2)" />
+    <!-- Chip -->
+    <rect x="932" y="102" width="30" height="22" rx="4" fill="#fbbf24" opacity="0.9" />
+    <line x1="932" y1="113" x2="962" y2="113" stroke="#b45309" stroke-width="1" />
+    <!-- Card Brand Indicator -->
+    <circle cx="1095" cy="185" r="12" fill="#ef4444" opacity="0.8" />
+    <circle cx="1108" cy="185" r="12" fill="#f59e0b" opacity="0.8" />
+    <!-- Text Elements -->
+    <text x="932" y="162" fill="#ffffff" font-size="11" font-weight="600" class="card-text" opacity="0.9">•••• 8820</text>
+    <text x="932" y="195" fill="#f1f5f9" font-size="9" font-weight="500" class="card-text" letter-spacing="1">EXPENSE T&amp;E</text>
+    <text x="1055" y="105" fill="#ffffff" font-size="10" font-weight="700" class="card-text" opacity="0.7">VIRTUAL</text>
+  </g>
+
+  <!-- Primary Floating Corporate Card (Card 1) -->
+  <g class="anim-card1" filter="url(#cardShadow)">
+    <rect x="800" y="125" width="240" height="148" rx="16" fill="url(#cardGrad1)" stroke="#60a5fa" stroke-width="1.5" />
+    <!-- Chip -->
+    <rect x="825" y="150" width="34" height="26" rx="5" fill="#fde047" />
+    <line x1="825" y1="163" x2="859" y2="163" stroke="#d97706" stroke-width="1.2" />
+    <line x1="842" y1="150" x2="842" y2="176" stroke="#d97706" stroke-width="1.2" />
+    <!-- Contactless Wave -->
+    <path d="M 872 153 A 10 10 0 0 1 872 173 M 876 150 A 15 15 0 0 1 876 176" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.75" stroke-linecap="round" />
+    <!-- Logo / Card Type -->
+    <text x="970" y="154" fill="#ffffff" font-size="11" font-weight="700" class="card-text" letter-spacing="1.2" opacity="0.9">PLATINUM</text>
+    <!-- Numbers & Name -->
+    <text x="825" y="215" fill="#ffffff" font-size="13" font-weight="600" class="card-text" letter-spacing="2">4242 •••• •••• 9012</text>
+    <text x="825" y="248" fill="#e2e8f0" font-size="10" font-weight="600" class="card-text" letter-spacing="1">CORPORATE SPEND</text>
+    <!-- Dual overlapping circles for corporate brand -->
+    <circle cx="995" cy="242" r="14" fill="#ffffff" opacity="0.3" />
+    <circle cx="1010" cy="242" r="14" fill="#38bdf8" opacity="0.6" />
+  </g>
+
+  <!-- Foreground Title and Badges (Ensuring clear contrast & 100% visibility) -->
+  <g transform="translate(80, 0)">
+    <!-- Pill Badge -->
+    <g class="anim-badge" transform="translate(0, 48)">
+      <rect width="270" height="30" rx="15" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2" />
+      <circle cx="16" cy="15" r="4.5" fill="#10b981" />
+      <text x="28" y="19" fill="#93c5fd" font-size="11.5" font-weight="600" class="card-text" letter-spacing="0.5">FINTECH &amp; SPEND MANAGEMENT</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="132" class="title-text" font-size="44">Awesome Corporate Card</text>
+    
+    <!-- Gradient accent line under title -->
+    <rect x="0" y="148" width="540" height="3" rx="1.5" fill="url(#glowGrad)" />
+
+    <!-- Subtitle / Descriptions -->
+    <text x="0" y="185" class="subtitle-text" font-size="17" font-weight="500" fill="#f8fafc">
+      Curated List of Commercial Charge Cards, BaaS Issuing &amp; Spend Controls
+    </text>
+
+    <text x="0" y="218" class="subtitle-text" font-size="14.5" fill="#94a3b8">
+      Explore top SaaS platforms, open-source expense engines, and BaaS issuing APIs.
+    </text>
+
+    <!-- Category Feature Tags / Chips -->
+    <g transform="translate(0, 256)">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="138" height="28" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="14" y="18" fill="#38bdf8" font-size="12" font-weight="600" class="card-text">💳 Corporate Cards</text>
+
+      <!-- Tag 2 -->
+      <rect x="150" y="0" width="154" height="28" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="162" y="18" fill="#818cf8" font-size="12" font-weight="600" class="card-text">⚡ Spend Automation</text>
+
+      <!-- Tag 3 -->
+      <rect x="316" y="0" width="134" height="28" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="328" y="18" fill="#34d399" font-size="12" font-weight="600" class="card-text">🌐 Card Issuing APIs</text>
+
+      <!-- Tag 4 -->
+      <rect x="462" y="0" width="136" height="28" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="474" y="18" fill="#f472b6" font-size="12" font-weight="600" class="card-text">📂 Open Source</text>
+    </g>
+  </g>
+</svg>
